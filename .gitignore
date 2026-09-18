@@ -1,14 +1,31 @@
-# Compiled class file
+# Gradle build output
+.gradle/
+build/
+bin/
+
+# Java / Spring Boot outputs
+*.jar
+*.war
+*.ear
 *.class
 
 # Log file
 *.log
 
-# BlueJ files
-*.ctxt
-
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
+
+# IDE & Editor files
+.vscode/*
+!.vscode/settings.json
+.idea/
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+.factorypath
 
 # Package Files #
 *.jar
@@ -19,6 +36,16 @@
 *.tar.gz
 *.rar
 
+# Gradle wrapper
+!gradle/wrapper/gradle-wrapper.jar
+
+# OS & Environment files
+.DS_Store
+Thumbs.db
+.env
+.env.local
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+*.hprof
 hs_err_pid*
 replay_pid*

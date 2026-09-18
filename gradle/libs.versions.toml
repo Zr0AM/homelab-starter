@@ -1,0 +1,15 @@
+[versions]
+springBoot = "4.1.1"
+mockito = "5.20.0"
+logbackEcs = "1.6.0"
+springdoc = "3.1.0"
+resilience4j = "5.0.3"
+
+[libraries]
+spring-boot-starter-webmvc = { module = "org.springframework.boot:spring-boot-starter-webmvc", version.ref = "springBoot" }
+spring-boot-starter-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator", version.ref = "springBoot" }
+spring-boot-starter-validation = { module = "org.springframework.boot:spring-boot-starter-validation", version.ref = "springBoot" }
+logback-ecs = { module = "co.elastic.logging:logback-ecs-encoder", version.ref = "logbackEcs" }
+springdoc-openapi = { module = "org.springdoc:springdoc-openapi-starter-webmvc-ui", version.ref = "springdoc" }
+resilience4j = { module = "org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j", version.ref = "resilience4j" }
+mockito = { module = "org.mockito:mockito-core", version.ref = "mockito" }
