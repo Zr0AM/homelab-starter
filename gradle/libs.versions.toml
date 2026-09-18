@@ -1,7 +1,7 @@
 [versions]
 springBoot = "4.1.1"
 mockito = "5.20.0"
-logbackEcs = "1.6.0"
+logbackEcs = "1.8.0"
 springdoc = "3.1.0"
 resilience4j = "5.0.3"
 
