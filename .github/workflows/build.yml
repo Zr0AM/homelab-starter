@@ -31,4 +31,8 @@ jobs:
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./gradlew build sonar --info
+        run: |
+          if [ -n "$SONAR_TOKEN" ]; then
+            export SONAR_TOKEN="$(printf '%s' "$SONAR_TOKEN" | tr -d '\r\n[:space:]')"
+          fi
+          ./gradlew build sonar --info
