@@ -36,6 +36,9 @@ bin/
 *.tar.gz
 *.rar
 
+# Gradle wrapper
+!gradle/wrapper/gradle-wrapper.jar
+
 # OS & Environment files
 .DS_Store
 Thumbs.db
