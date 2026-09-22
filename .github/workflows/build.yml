@@ -30,7 +30,6 @@ jobs:
         # run: chmod +x gradlew
 
       - name: Build
-        shell: pwsh
         run: ./gradlew build --info
 
   sonar:
@@ -68,7 +67,6 @@ jobs:
         # run: chmod +x gradlew
 
       - name: Analyze with SonarCloud
-        shell: pwsh
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: .\gradlew.bat sonar --info
