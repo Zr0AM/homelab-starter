@@ -10,12 +10,13 @@ plugins {
 
 group = 'com.zr0am'
 
-// GitHub Packages versions are immutable — republishing the same coordinates is rejected. CI
-// therefore stamps every run with its own version so pushes to main never collide. Local builds
-// stay on SNAPSHOT, which mavenLocal is happy to overwrite. Bump baseVersion for a real release.
-def baseVersion = '0.0.1'
-def buildNumber = System.getenv('GITHUB_RUN_NUMBER')
-version = (buildNumber ? "${baseVersion}-build.${buildNumber}" : "${baseVersion}-SNAPSHOT").toString()
+def buildDate = java.time.LocalDate.now(java.time.ZoneOffset.UTC)
+	.format(java.time.format.DateTimeFormatter.ofPattern('yyyy-MM-dd'))
+
+def runNumber = System.getenv('GITHUB_RUN_NUMBER') ?: '0'
+def buildNumber = System.getenv('GITHUB_RUN_ATTEMPT') ?: '0'
+
+version = "${buildDate}-${runNumber}-${buildNumber}"
 
 java {
 	toolchain {
