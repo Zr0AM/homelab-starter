@@ -27,6 +27,7 @@ public class ApiExceptionHandlerAdvice {
     private final ApiStarterProperties.Advice config;
     private final ApiStarterProperties.RequestId requestIdConfig;
 
+    // test
     public ApiExceptionHandlerAdvice(ApiStarterProperties.Advice config,
                                      ApiStarterProperties.RequestId requestIdConfig) {
         this.config = config;
