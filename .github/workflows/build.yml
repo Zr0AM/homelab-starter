@@ -68,4 +68,4 @@ jobs:
       - name: Analyze with SonarCloud
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: .\gradlew.bat sonar --no-daemon --console=plain --info
+        run: .\gradlew.bat sonar --no-daemon --console=plain
