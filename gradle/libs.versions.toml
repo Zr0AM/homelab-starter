@@ -1,5 +1,5 @@
 [versions]
-springBoot = "4.1.1"
+springBoot = "4.1.2"
 mockito = "5.23.0"
 logbackEcs = "1.8.0"
 springdoc = "3.1.1"
